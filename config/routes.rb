@@ -1,8 +1,7 @@
 SampleApp::Application.routes.draw do
-  get "pages/home"
-  get "pages/about"
-  get "pages/help"
-  get "pages/contact"
+  get "users/new"
+  
+  match'/signup', :to => 'users#new'
   
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
@@ -22,7 +21,7 @@ SampleApp::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+ 
   # Sample resource route with options:
   #   resources :products do
   #     member do 
